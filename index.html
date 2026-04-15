@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mog Calculator</title>
+    <title>Incel Calculator</title>
     <style>
         #height-display {
             white-space: nowrap;
@@ -149,7 +149,7 @@
 
         <button id="theme-toggle" class="theme-button">Dark Mode</button>
         
-        <h1>Mog Calculator v1.2</h1>
+        <h1>Incel Calculator v1.2</h1>
         <p>Use the sliders below to input your stats:</p>
 
         <h2>Body</h2>
@@ -272,13 +272,13 @@
         </div>
     
 
-        <h2>Your Mog Score</h2>
+        <h2>Your Incel Score</h2>
         <div class="score-bar-container">
             <div class="score-bar">
                 <div class="current-score" id="current-score"></div>
             </div>
         </div>
-        <p>Your score: <span id="mog-score">0</span></p>
+        <p>Your score: <span id="Incel-score">0</span></p>
         <h2 id="user-type">You are a:</h2>
         <p id="user-description"></p>
 
@@ -333,7 +333,7 @@
         const voiceDepthValue = document.getElementById('voice-depth-value');
         const autismSpectrumSlider = document.getElementById('autism-spectrum-slider');
         const autismSpectrumValue = document.getElementById('autism-spectrum-value');
-        const mogScore = document.getElementById('mog-score');
+        const IncelScore = document.getElementById('Incel-score');
         const liveWithParentsYes = document.getElementById('live-with-parents-yes');
         const liveWithParentsNo = document.getElementById('live-with-parents-no');
         const ethnicityPerceptionSlider = document.getElementById('ethnicity-perception-slider');
@@ -518,8 +518,8 @@
             confidenceValue.textContent = confidenceLabels[level];
         }
 
-        // Function to update the Mog Score
-        function updateMogScore() {
+        // Function to update the Incel Score
+        function updateIncelScore() {
             // Get the values from the sliders
             const height = parseInt(heightSlider.value);
             const iq = parseInt(iqSlider.value);
@@ -597,7 +597,7 @@
             updateHistoryDisplay(history);
             updateConfidenceDisplay(confidence);
 
-            // Calculate the Mog Score (simple proportional formula for now)
+            // Calculate the Incel Score (simple proportional formula for now)
             //const liveWithParentsScore = liveWithParentsNo.checked ? 20 : 0; [remove if not needed]
             
             // Define weight percentages for each metric
@@ -724,8 +724,8 @@
             if (history >= 4 && score <= 55) {
                 score = 55
             }
-            // Update the Mog Score display
-            mogScore.textContent = score;
+            // Update the Incel Score display
+            IncelScore.textContent = score;
 
             // Update the user type and description
             const userType = document.getElementById('user-type');
@@ -765,33 +765,33 @@
             const currentScoreBar = document.getElementById('current-score');
             currentScoreBar.style.width = `${scorePercentage}%`;
         
-            const scoreValue = document.getElementById('mog-score');
+            const scoreValue = document.getElementById('Incel-score');
             scoreValue.textContent = score; // Update the text displaying the score
         }
 
-        // Add event listeners to update the Mog Score when the sliders change
-        heightSlider.addEventListener('input', updateMogScore);
-        iqSlider.addEventListener('input', updateMogScore);
-        bodyFatSlider.addEventListener('input', updateMogScore);
-        friendsSlider.addEventListener('input', updateMogScore);
-        netWorthSlider.addEventListener('input', updateMogScore);
-        penisSlider.addEventListener('input', updateMogScore);
-        girthSlider.addEventListener('input', updateMogScore);
-        muscleSlider.addEventListener('input', updateMogScore);
-        faceSlider.addEventListener('input', updateMogScore);
-        socialSkillSlider.addEventListener('input', updateMogScore);
-        bodyFrameSlider.addEventListener('input', updateMogScore);
-        voiceDepthSlider.addEventListener('input', updateMogScore);
-        autismSpectrumSlider.addEventListener('input', updateMogScore);
-        liveWithParentsYes.addEventListener('change', updateMogScore);
-        liveWithParentsNo.addEventListener('change', updateMogScore);
-        ethnicityPerceptionSlider.addEventListener('input', updateMogScore);
-        baldingSlider.addEventListener('input', updateMogScore);
-        historySlider.addEventListener('input', updateMogScore);
-        confidenceSlider.addEventListener('input', updateMogScore);
+        // Add event listeners to update the Incel Score when the sliders change
+        heightSlider.addEventListener('input', updateIncelScore);
+        iqSlider.addEventListener('input', updateIncelScore);
+        bodyFatSlider.addEventListener('input', updateIncelScore);
+        friendsSlider.addEventListener('input', updateIncelScore);
+        netWorthSlider.addEventListener('input', updateIncelScore);
+        penisSlider.addEventListener('input', updateIncelScore);
+        girthSlider.addEventListener('input', updateIncelScore);
+        muscleSlider.addEventListener('input', updateIncelScore);
+        faceSlider.addEventListener('input', updateIncelScore);
+        socialSkillSlider.addEventListener('input', updateIncelScore);
+        bodyFrameSlider.addEventListener('input', updateIncelScore);
+        voiceDepthSlider.addEventListener('input', updateIncelScore);
+        autismSpectrumSlider.addEventListener('input', updateIncelScore);
+        liveWithParentsYes.addEventListener('change', updateIncelScore);
+        liveWithParentsNo.addEventListener('change', updateIncelScore);
+        ethnicityPerceptionSlider.addEventListener('input', updateIncelScore);
+        baldingSlider.addEventListener('input', updateIncelScore);
+        historySlider.addEventListener('input', updateIncelScore);
+        confidenceSlider.addEventListener('input', updateIncelScore);
 
-        // Initialize the Mog Score on page load
-        updateMogScore();
+        // Initialize the Incel Score on page load
+        updateIncelScore();
 
 
         //DARK MODE TOGGLE
